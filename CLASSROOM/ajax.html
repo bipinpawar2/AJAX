@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script  type="text/javascript">
+        function getscore()
+        {
+            boy=new XMLHttpRequest();
+             girl= new XMLHttpRequest();
+
+             var url="scorer.txt";
+             boy.open("GET",url,true); //5 parameters
+             
+             boy.onreadystatechange=function(){
+             boy.readystate;
+            // alert(boy.readystate)
+
+            if(boy.readystate==4){
+                var runs  = boy.responseText;
+                document.getElementById("score").innerHTML=runs;
+
+            }
+             }
+             boy.send();
+             console.log("end");
+
+
+        }
+        
+        
+        </script>
+    </head>
+    <body>
+
+        <div><section>
+            <h3>India And South  Africa </h3>
+            <p>scores is<span id ="score"> Checks</span></p>
+            <button type="button" onclick="getscore()">check Score</button>
+        </section>
+            <section>
+                <h2>India and china</h2>
+                <p>score is200</p>
+            </section>
+        </div>
+    </body>
+</html>
