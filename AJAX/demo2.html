@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script type="text/javascript">
+         let product=[{
+             name:"product1",
+             price:2000,
+             path:"nature.jpg"
+         }
+         ];
+         console.log(product);
+         Str='';
+         product.forEach(function(x1,x2){
+             console.log(x1);
+             str = str +
+             <div>
+             <img src='${x1.path}'/>
+             <h2>${x1.price}</h2>
+             </div>
+
+         })
+         console.log(str);
+        </script>
+    </body>
+</html>
